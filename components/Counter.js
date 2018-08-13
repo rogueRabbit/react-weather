@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import MainPanel from './mainPanel/index';
 
 class Counter extends Component {
     render() {
         const {increment, incrementIfOdd, incrementAsync, decrement, counter} = this.props;
         return (
-            <p>
+            <div>
                 Clicked: {counter} times
                 {' '}
                 <button onClick={increment}>+</button>
@@ -15,7 +16,8 @@ class Counter extends Component {
                 <button onClick={incrementIfOdd}>Increment if odd</button>
                 {' '}
                 <button onClick={() => incrementAsync()}>Increment async</button>
-            </p>
+                <MainPanel />
+            </div>
         )
     }
 }
